@@ -5,7 +5,10 @@ def call_add(args, logic):
     logic.add_task(description=args.description)
 
 def call_update(args, logic):
-    logic.update_task(id=args.id, description=args.description)
+    logic.update_task(ID=args.ID, description=args.description)
+
+def call_delete(args, logic):
+    logic.delete_task(ID=args.ID)
 
 def main():
     # Main parser
@@ -23,20 +26,21 @@ def main():
     
     # 'update' command
     update_parser = subparsers.add_parser('update')
-    update_parser.add_argument('id', type=int)
+    update_parser.add_argument('ID', type=int)
     update_parser.add_argument('description', type=str)
     update_parser.set_defaults(func=call_update)
 
     # 'delete' command
     delete_parser = subparsers.add_parser('delete')
-    delete_parser.add_argument('id', type=int)
+    delete_parser.add_argument('ID', type=int)
+    delete_parser.set_defaults(func=call_delete)
 
     # 'Marking' command 
     progress_parser = subparsers.add_parser('mark-in-progress')
-    progress_parser.add_argument('id', type=int)
+    progress_parser.add_argument('ID', type=int)
 
     done_parser = subparsers.add_parser('mark-done')
-    done_parser.add_argument('id', type=int)
+    done_parser.add_argument('ID', type=int)
 
     # 'List' command
     list_parser = subparsers.add_parser('list')

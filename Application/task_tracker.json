@@ -1,22 +1,12 @@
 [
     {
         "id": 1,
-        "task": "Buy groceries",
+        "task": "clean bedrooms",
         "status": null
     },
     {
         "id": 2,
-        "task": "play football",
-        "status": null
-    },
-    {
-        "id": 3,
-        "task": "read book",
-        "status": null
-    },
-    {
-        "id": 4,
-        "task": "study",
+        "task": "Buy groceries",
         "status": null
     }
 ]
