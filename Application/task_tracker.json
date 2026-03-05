@@ -1,12 +1,30 @@
 [
     {
         "id": 1,
-        "task": "clean bedrooms",
-        "status": null
+        "task": "clean room",
+        "status": "todo",
+        "createdAt": "2026-03-05",
+        "updateAt": "2026-03-05"
     },
     {
         "id": 2,
-        "task": "Buy groceries",
-        "status": null
+        "task": "buy groceries",
+        "status": "todo",
+        "createdAt": "2026-03-05",
+        "updateAt": "2026-03-05"
+    },
+    {
+        "id": 3,
+        "task": "gym",
+        "status": "done",
+        "createdAt": "2026-03-05",
+        "updateAt": "2026-03-05"
+    },
+    {
+        "id": 4,
+        "task": "hang out",
+        "status": "todo",
+        "createdAt": "2026-03-05",
+        "updateAt": "2026-03-05"
     }
 ]
