@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Dashboard</title>
+    <link rel="stylesheet" href="TodoDashboard.css">
+</head>
+
+<body>
+    <main class="layout">
+        <aside class="sidebar" aria-label="Todo actions">
+            <h1 class="title">Task Tracker</h1>
+
+            <div class="actions">
+                <button type="button" id="btn-add">Add</button>
+                <button type="button" id="btn-update">Update</button>
+                <button type="button" id="btn-delete">Delete</button>
+                <button type="button" id="btn-list">List</button>
+            </div>
+        </aside>
+
+        <section class="content" aria-label="Todo list display">
+            <div class="todo-box" id="todo-box" role="region" aria-label="Todo list">
+                <div class="todo-box-header">
+                    <h2>Todo List</h2>
+                </div>
+                <div class="todo-box-body">
+                    <p class="hint">Your tasks will show here.</p>
+
+                    <ul class="todo-list" aria-label="Tasks">
+                        <li class="todo-item">
+                            <span class="todo-title">Example task</span>
+                            <span class="todo-status">todo</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

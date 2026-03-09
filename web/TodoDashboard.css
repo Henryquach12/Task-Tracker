@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #eee;
+}
+
+.layout {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem;
+}
+
+.sidebar {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.actions button {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.15);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.05s;
+}
+
+.actions button:hover {
+    border-color: rgba(79, 156, 249, 0.7);
+    background: rgba(79, 156, 249, 0.12);
+}
+
+.actions button:active {
+    transform: translateY(1px);
+}
+
+.content {
+    display: flex;
+    align-items: stretch;
+}
+
+.todo-box {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+
+.todo-box-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.todo-box-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.todo-box-body {
+    padding: 1rem 1.25rem 1.25rem 1.25rem;
+}
+
+.hint {
+    margin: 0 0 1rem 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.todo-title {
+    font-weight: 600;
+}
+
+.todo-status {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid rgba(79, 156, 249, 0.35);
+    background: rgba(79, 156, 249, 0.12);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 840px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
