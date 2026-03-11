@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="Login.css">
+    <style>
+        .field-error {
+            display: none;
+            margin-top: 2px;
+            font-size: 0.85rem;
+            line-height: 1.1;
+            color: #c62828;
+        }
+    </style>
 </head>
 
 <body>
-    <form method="POST" action="/login">
+    <form method="POST" action="http://localhost:8001/login">
         <h1>Login</h1>
 
         <label for="username">Username:</label>
@@ -30,6 +39,7 @@
                 </svg>
             </button>
         </div>
+        <div id="password-error" class="field-error" role="status" aria-live="polite">Password is wrong</div>
 
         <button type="submit">Login</button>
         <p>Don't have an account? <a href="Registration.html">Register here</a></p>
@@ -40,6 +50,13 @@
 
 <script>
     (() => {
+        const params = new URLSearchParams(window.location.search);
+        const error = (params.get("error") || "").toLowerCase();
+        if (error === "wrong_password" || error === "invalid" || error === "invalid_credentials") {
+            const passwordError = document.getElementById("password-error");
+            if (passwordError) passwordError.style.display = "block";
+        }
+
         const button = document.querySelector(".toggle-password");
         const password = document.getElementById("password");
 
